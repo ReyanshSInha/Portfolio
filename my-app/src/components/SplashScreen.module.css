@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+.SplashScreen{
+    height: 100vh;
+    width: 100vw;
+    background-color: #333333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1000;
+    animation: exit 2s forwards;
+    animation-delay: 1.5s;
+}
+
+.LogoSVG{
+    background-color: blue;
+}
+
+/* .SplashText{
+    font-size: 5rem;
+    font-family: 'Comfortaa', cursive;
+    animation: entry 2s forwards;
+    opacity: 0;
+
+} */
+
+/* .SplashSubText{
+    font-size: 5rem;
+    font-family: 'Comfortaa', cursive;
+    animation: entry 2s forwards;
+    animation-delay: 1s;
+    opacity: 0;
+
+} */
+
+/* @keyframes entry {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(-50%);
+        opacity: 1;
+    }
+    
+} */
+
+/* @keyframes exit {
+    0%{
+        transform: translateY(0%)
+    }
+
+    100%{
+        transform: translateY(-100%);
+    }
+} */
+
+
+@media (max-width: 763px) {
+
+    .SplashText{
+        font-size: 3rem;
+    }
+
+    .SplashSubText{
+        font-size: 3rem;
+    }
+    
+}
