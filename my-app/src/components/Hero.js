@@ -1,8 +1,10 @@
 import classes from "./Hero.module.css"
-import { delay, motion } from "framer-motion"
+import { animate, delay, motion } from "framer-motion"
 import image1 from "../assets/HeroImage.jpg"
 import image2 from "../assets/HeroImageTwo.jpeg"
 import { useState, useEffect } from "react";
+import { GrLinkedin, GrGithub } from "react-icons/gr";
+
 
 const titleVariants = {
     hidden: {
@@ -65,12 +67,44 @@ const textVariants = {
     }
 }
 
+const iconOneVariants = {
+    initial: {
+        y: 400,
+        opacity: 0
+    },
+
+    animate: {
+        y: 0,
+        opacity: 1,
+        transition: {
+            duration: 1.5,
+            delay: 3.5
+        }
+    }
+}
+
+const iconTwoVariants = {
+    initial: {
+        y: 400,
+        opacity: 0
+    },
+
+    animate: {
+        y: 0,
+        opacity: 1,
+        transition: {
+            duration: 1.6,
+            delay: 3.7
+        }
+    }
+}
+
 
 
 const Data = [
-    { Image: image1,color:"orange", title: "Who Am I?", text: "adf adf a dfa d fafa s" },
-    { Image: image1,color:"orange", title: "Why this website", text: "adf aadfadfadfafdf a dfa d fafa s" },
-    { Image: image1,color: "orange", title: "My Interests", text: "vnxcvm,nzc, adf adf a dfa d fafa s" }
+    { Image: image1, color: "orange", title: "Who Am I?", text: "adf adf a dfa d fafa s" },
+    { Image: image1, color: "orange", title: "Why this website", text: "adf aadfadfadfafdf a dfa d fafa s" },
+    { Image: image1, color: "orange", title: "My Interests", text: "vnxcvm,nzc, adf adf a dfa d fafa s" }
 ]
 
 
@@ -111,14 +145,18 @@ const Hero = () => {
         setTextIsComplete(!textIsComplete)
     }
 
-    return  <motion.div
-        style={{ backgroundColor: Data[index].color} }
+    return <motion.div
+        style={{ backgroundColor: Data[index].color }}
         className={classes.Hero}>
         <motion.div style={{ pointerEvents: "auto" }} className={classes.AnimationSection}>
-            <motion.h3 className={classes.HeroText} key={index} variants={titleVariants} initial="hidden" whileInView="visible" onAnimationComplete={animationCompleteHandler} animate={ isComplete ? "exit" : ""} >{Data[index].title}</motion.h3>
-            <motion.p className={classes.HeroSubText} key={index + 100} variants={textVariants} initial="hidden" whileInView="visible" >
+            <motion.h3 className={classes.HeroText} key={index} variants={titleVariants} initial="hidden" whileInView="visible" onAnimationComplete={animationCompleteHandler} animate={isComplete ? "exit" : ""} >{Data[index].title}</motion.h3>
+            <motion.p className={classes.HeroSubText} key={index + 100} variants={textVariants} initial="hidden" animate="visible" >
                 {Data[index].text}
             </motion.p>
+            <div className={classes.IconSection}>
+                <motion.span variants={iconOneVariants} initial="initial" animate="animate" className={classes.IconOne}><a href="#"><GrLinkedin size="3rem" color="#0077b5" /></a></motion.span>
+                <motion.span variants={iconTwoVariants} initial="initial" animate="animate" className={classes.IconTwo}><a href="#"><GrGithub size="3rem" color="black" /></a></motion.span>
+            </div>
             {/* <motion.div
                 style={{ pointerEvents: "auto" }}
 
@@ -135,7 +173,6 @@ const Hero = () => {
         <div className={classes.ImageSection}>
             <motion.img
                 key={index + 10}
-                animate={{ borderRadius: "45%",  transition: { duration: 1 } }}
                 className={classes.HeroImage} width="400px" src={Data[index].Image} />
         </div>
 
