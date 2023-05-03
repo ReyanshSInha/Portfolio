@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,500;0,600;1,400;1,500&family=Montserrat:wght@500&family=Raleway:wght@300&display=swap');
+
+
+.BlogCard{
+    width: 270px;
+    height: 340px;
+    border: 2px solid rgb(28, 28, 28);
+    border-radius: 20px;
+    background-color: rgb(246, 210, 143);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    cursor: pointer;
+    align-items: center;
+    padding: 10px;
+    margin: 40px;
+}
+
+.BlogCardImage{
+    width: 90%;
+    height: 55%;
+    background-color: red;
+    border-radius: 20px 20px 0 0;
+}
+
+.BlogCardTitle{
+    font-size: 2rem;
+    text-align: center;
+    margin: 10px;
+    color: black;
+    font-family: 'Kodchasan', sans-serif;
+}
+
+
+.Mobile{
+    display: none;
+}
+
+@media (max-width: 763px) {
+    .Laptop{
+        display: none;
+    }
+
+    .Mobile{
+        display: flex;
+    }
+}

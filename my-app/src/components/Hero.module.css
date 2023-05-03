@@ -4,8 +4,9 @@
 .Hero{
     width: 100vw;
     background-color: orange;
-    min-height: calc(100vh - 60px);
+    min-height: calc(100vh);
     display: flex;
+    /* border: 22px solid black; */
     flex-wrap: wrap-reverse;
     justify-content: space-around;
     align-items: center;
