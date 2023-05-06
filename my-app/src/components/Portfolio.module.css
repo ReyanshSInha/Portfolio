@@ -1,0 +1,23 @@
+.Portfolio{
+    width: 100vw;
+    height: 100vh;
+    background-color: #191970;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Portfolio > div{
+    color: white;
+    font-size: 6rem;
+    text-align: center;
+}
+
+@media (max-width: 763px) {
+
+    .Portfolio > div{
+        font-size: 3rem;
+    }
+    
+}

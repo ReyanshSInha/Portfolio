@@ -9,6 +9,7 @@
     align-items: center;
     position: fixed;
     z-index: 100000;
+    overflow: hidden;
     /* border: 2px solid black; */
     justify-content: space-between;
 }
@@ -58,7 +59,7 @@
     display: none;
 }
 
-@media (max-width: 763px) {
+@media (max-width: 1024px) {
 
     .Logo {
         margin-left: 5px;

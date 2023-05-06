@@ -17,6 +17,7 @@ const pathVariants = {
 
 
 
+
 const SplashScreen = () => {
 
     const [splashVisible, setSplashVisible] = useState(true)
@@ -25,7 +26,7 @@ const SplashScreen = () => {
         className={classes.SplashScreen}
         initial={{ opacity: 1 }}
         animate={{ opacity: 0, transition: { delay: 2.5 } }}
-        onAnimationComplete={() => setSplashVisible(!splashVisible)}
+        onAnimationComplete={() => setSplashVisible(false)}
     >
         <div className={classes.SplashText}>
             <svg width="378" height="92" viewBox="0 0 378 92" fill="none" xmlns="http://www.w3.org/2000/svg">

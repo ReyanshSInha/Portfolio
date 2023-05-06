@@ -62,11 +62,13 @@
 @media (max-width: 763px) {
 
     .SplashText{
-        font-size: 3rem;
+        font-size: 2rem;
+        padding: 200px;
     }
 
     .SplashSubText{
         font-size: 3rem;
     }
-    
+
+   
 }

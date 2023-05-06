@@ -1,5 +1,5 @@
 import classes from "./Hero.module.css"
-import { animate, delay, motion } from "framer-motion"
+import { AnimatePresence, animate, delay, motion } from "framer-motion"
 import image1 from "../assets/HeroImage.jpg"
 import image2 from "../assets/HeroImageTwo.jpeg"
 import { useState, useEffect } from "react";
@@ -29,7 +29,7 @@ const titleVariants = {
         x: -600,
         transition: {
             duration: 0.5,
-            delay: 1
+            // delay: 1
 
         }
     }
@@ -61,7 +61,7 @@ const textVariants = {
         x: -400,
         transition: {
             duration: 0.5,
-            delay: 1
+        
 
         }
     }
@@ -102,9 +102,9 @@ const iconTwoVariants = {
 
 
 const Data = [
-    { Image: image1, color: "orange", title: "Who Am I?", text: "adf adf a dfa d fafa s" },
-    { Image: image1, color: "orange", title: "Why this website", text: "adf aadfadfadfafdf a dfa d fafa s" },
-    { Image: image1, color: "orange", title: "My Interests", text: "vnxcvm,nzc, adf adf a dfa d fafa s" }
+    { Image: image1, color: "#191970", title: "Who Am I?", text: "adf adf a dfa d fafa s" },
+    { Image: image1, color: "#191970", title: "Why this website", text: "adf aadfadfadfafdf a dfa d fafa s" },
+    { Image: image1, color: "#191970", title: "My Interests", text: "vnxcvm,nzc, adf adf a dfa d fafa s" }
 ]
 
 
@@ -149,13 +149,15 @@ const Hero = () => {
         style={{ backgroundColor: Data[index].color }}
         className={classes.Hero}>
         <motion.div style={{ pointerEvents: "auto" }} className={classes.AnimationSection}>
-            <motion.h3 className={classes.HeroText} key={index} variants={titleVariants} initial="hidden" whileInView="visible" onAnimationComplete={animationCompleteHandler} animate={isComplete ? "exit" : ""} >{Data[index].title}</motion.h3>
-            <motion.p className={classes.HeroSubText} key={index + 100} variants={textVariants} initial="hidden" animate="visible" >
-                {Data[index].text}
-            </motion.p>
+            <AnimatePresence>
+                <motion.h3 className={classes.HeroText} key={index} variants={titleVariants} initial="hidden" whileInView="visible" onAnimationComplete={animationCompleteHandler} exit="exit" >{Data[index].title}</motion.h3>
+                <motion.p className={classes.HeroSubText} key={index + 100} variants={textVariants} initial="hidden" animate="visible" exit="exit">
+                    {Data[index].text}
+                </motion.p>
+            </AnimatePresence>
             <div className={classes.IconSection}>
-                <motion.span variants={iconOneVariants} initial="initial" animate="animate" className={classes.IconOne}><a href="#"><GrLinkedin size="3rem" color="#0077b5" /></a></motion.span>
-                <motion.span variants={iconTwoVariants} initial="initial" animate="animate" className={classes.IconTwo}><a href="#"><GrGithub size="3rem" color="black" /></a></motion.span>
+                <motion.span variants={iconOneVariants} initial="initial" animate="animate" className={classes.IconOne}><a href="#"><GrLinkedin size="3rem" color="skyblue" /></a></motion.span>
+                <motion.span variants={iconTwoVariants} initial="initial" animate="animate" className={classes.IconTwo}><a href="#"><GrGithub size="3rem" color="lavender" /></a></motion.span>
             </div>
             {/* <motion.div
                 style={{ pointerEvents: "auto" }}

@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,500;0,600;1,400;1,500&family=Montserrat:wght@500&family=Raleway:wght@300&display=swap');
+
+
+.Connect{
+    height: 100vh;
+    width: 100vw;
+    background-color: #191970;
+    display: flex;
+}
+
+.ConnectTextOne{
+    max-width: 600px;
+    /* border: 5px solid red; */
+    color: whitesmoke;
+    font-size: 6rem;
+    position: absolute;
+    font-family: 'Kodchasan', sans-serif;
+
+    z-index: 300;
+    left: 10%;
+    text-align: left;
+    top: 10%;
+}
+
+.ConnectTextTwo{
+    max-width: 600px;
+    /* border: 5px solid red; */
+    color: whitesmoke;
+    font-size: 6rem;
+    position: absolute;
+    font-family: 'Kodchasan', sans-serif;
+
+    left: 10%;
+    z-index: 301;
+    text-align: left;
+    top: 10%;
+}
+
+.ConnectTextThree{
+    max-width: 500px;
+    /* border: 5px solid red; */
+    color: whitesmoke;
+    z-index: 302;
+    font-size: 6rem;
+    font-family: 'Kodchasan', sans-serif;
+
+    position: absolute;
+    left: 10%;
+    text-align: left;
+    top: 10%;
+}
+
+
+.LetsConnect{
+    max-width: 500px;
+    font-size: 5rem;
+    color: whitesmoke;
+    font-family: 'Kodchasan', sans-serif;
+    position: absolute;
+    z-index: 400;
+    left: 10%;
+    top: 30%;
+    
+}
+
+
+.IconSection{
+    /* border: 2px solid beige; */
+    position: absolute;
+    top: 63%;
+    left: 210px;
+    transform: translatex(-50%);
+    display: flex;
+    gap: 20px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.IconOne{
+    cursor: pointer;
+}
+
+.IconTwo{
+    cursor: pointer;
+}
+
+.Laptop{
+    width: 400px;
+    height: 500px;
+    /* background-color: bisque; */
+    position: absolute;
+    z-index: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    top: 20%;
+
+    gap: 20px;
+    padding: 30px;
+    right: 5%;
+    /* border: 2px solid navajowhite; */
+    border-radius: 20px;
+}
+
+.InputName{
+    text-decoration: none;
+    font-family: 'Kodchasan', sans-serif;
+
+    width: 75%;
+    height: 45px;
+    color: beige;
+    font-size: 1rem;
+    background-color: #191970;
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px solid white;
+}
+
+.InputName::placeholder{
+    font-family: 'Kodchasan', sans-serif;
+
+    opacity: 1;
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.InputEmail::placeholder{
+    font-family: 'Kodchasan', sans-serif;
+
+    opacity: 1;
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.InputKnown::placeholder{
+    font-family: 'Kodchasan', sans-serif;
+
+    opacity: 1;
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+textarea::placeholder{
+    font-family: 'Kodchasan', sans-serif;
+    opacity: 1;
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+input::placeholder{
+    font-family: 'Kodchasan', sans-serif;
+    opacity: 1;
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.InputName:focus{
+    border: 3px solid white;
+}
+
+.InputEmail{
+    width: 80%;
+    font-family: 'Kodchasan', sans-serif;
+
+    height: 45px;
+    color: beige;
+    font-size: 1rem;
+    padding: 10px;
+    background-color: #191970;
+    border-radius: 10px;
+    border: 3px solid white;
+}
+
+.InputKnown{
+    width: 85%;
+    font-family: 'Kodchasan', sans-serif;
+
+    height: 45px;
+    font-size: 1rem;
+    padding: 10px;
+    color: beige;
+    background-color: #191970;
+    border-radius: 10px;
+    border: 3px solid white;
+}
+
+.InputWhy{
+    width: 90%;
+    height: 100px;
+    font-family: 'Kodchasan', sans-serif;
+
+    font-size: 1rem;
+    color: beige;
+    padding: 10px;
+    background-color: #191970;
+    border-radius: 10px;
+    border: 3px solid white;
+}
+
+.Btn{
+    width: 100px;
+    height: 45px;
+    font-family: 'Kodchasan', sans-serif;
+
+    font-size: 1.3rem;
+    background-color: beige;
+    color: black;
+    border-radius: 10px;
+    border: 2px solid #191970;
+    cursor: pointer;
+}
+
+.ParentMobile{
+    display: none;
+}
+
+
+@media (max-width: 1024px) {
+    .Parent{
+        display: none;
+    }
+
+    .ParentMobile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #191970;
+        height: 100vh;
+        width: 100vw;
+       
+    }
+
+    .letsConnectMobile{
+        font-size: 3rem;
+        color: whitesmoke;
+        /* border: 2px solid white; */
+        margin-top: 70px;
+        margin-bottom: 10px;
+        font-family: 'Kodchasan', sans-serif;
+    }
+   
+    .IconSectionMobile{
+        /* border: 2px solid white; */
+        margin: 10px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .IconOneMobile{
+        margin-right: 20px;
+    }
+
+    .formMobile{
+        height: 500px;
+        width: 400px;
+        /* border: 3px solid white; */
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+   
+    .InputNameMobile{
+        height: 40px;
+        width: 80%;
+        background-color: #191970;
+        font-family: 'Kodchasan', sans-serif;
+        border: 3px solid whitesmoke;
+        border-radius: 10px;
+        padding: 10px;
+        color: beige;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .InputEmailMobile{
+        height: 40px;
+        width: 80%;
+        margin-top: 10px;
+        background-color: #191970;
+        font-family: 'Kodchasan', sans-serif;
+        border: 3px solid whitesmoke;
+        border-radius: 10px;
+        padding: 10px;
+        color: beige;
+        margin-bottom: 10px;
+    }
+
+    .InputKnownMobile{
+        height: 40px;
+        width: 80%;
+        margin-top: 10px;
+        background-color: #191970;
+        font-family: 'Kodchasan', sans-serif;
+        border: 3px solid whitesmoke;
+        border-radius: 10px;
+        padding: 10px;
+        color: beige;
+        margin-bottom: 10px;
+    }
+
+    .InputWhyMobile{
+        height: 140px;
+        width: 80%;
+        font-family: 'Kodchasan', sans-serif;
+        border: 3px solid whitesmoke;
+        border-radius: 10px;
+        padding: 10px;
+        color: beige;
+        margin-top: 10px;
+        background-color: #191970;
+        margin-bottom: 10px;
+    }
+
+    .BtnMobile{
+        width: 120px ;
+        height: 45px;
+        border-radius: 10px;
+        font-family: 'Kodchasan', sans-serif;
+        font-size: 1.3rem;
+        margin-top: 20px;
+    }
+
+    .MobileAnimation{
+        width: 500px;
+        color: whitesmoke;
+        /* border: 3px solid white; */
+        position: absolute;
+        z-index: 22000;
+        top: 100px;
+        font-size: 4rem;
+    }
+    
+}
+
+
+
+@media (max-width: 500px){
+    .letsConnectMobile{
+        font-size: 2rem;
+    }
+
+    .IconOneMobile{
+        margin-right: 5px;
+    }
+
+    .IconSectionMobile{
+        overflow: hidden;
+        margin-bottom: 40px;
+    }
+
+    .formMobile{
+        width: 80vw;
+
+    }
+
+    .MobileAnimation{
+        width: 300px;
+        color: whitesmoke;
+        /* border: 3px solid white; */
+        position: absolute;
+        z-index: 22000;
+        font-size: 3rem;
+        top: 100px;
+    }
+} 

@@ -3,7 +3,7 @@
 
 .Hero{
     width: 100vw;
-    background-color: orange;
+    background-color: #191970 ;
     min-height: calc(100vh);
     display: flex;
     /* border: 22px solid black; */
@@ -49,6 +49,7 @@
     text-align: center;
     position: absolute;
     top: 190px;
+    color: whitesmoke;
     /* border: 2px solid beige; */
     /* min-height: 300px; */
     font-family: 'Kodchasan', sans-serif;
@@ -93,25 +94,43 @@ a{
     border-radius: 10px;
 }
 
-@media (max-width: 767px) {
-
-    .Hero{
-        /* padding-top: 200px; */
-        overflow: scroll;
-    }
+@media (max-width: 900px) {
 
     .HeroImage{
+        margin-top: 100px;
         width: 300px;
-        margin-top: 50px;
-        /* margin-bottom: 40px; */
     }
 
     .AnimationSection{
-        margin-bottom: 50px;
-        margin-top: -40px;
+        width: 400px;
+        
+        /* border: 2px solid blue; */
     }
 
     .AnimationSection h3{
-        font-size: 2.2rem;
+        font-size: 2.5rem;
     }
+    
+}
+
+@media (max-width: 697px) {
+    .AnimationSection{
+        /* border: 2px solid red; */
+        height: 305px;
+    }
+
+    .AnimationSection h3{
+        top: 30px;
+        /* height: 150px; */
+        font-size: 2rem;
+    }
+    
+    .AnimationSection p{
+        top: 100px;
+    }
+
+    .IconSection{
+        top: 200px;
+    }
+   
 }
