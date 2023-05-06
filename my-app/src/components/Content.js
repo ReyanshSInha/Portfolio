@@ -51,7 +51,8 @@ const Content = (props) => {
         <motion.div variants={contentVariants} initial="initial" animate={contentState ? "animate" : "exit"} className={classes.ContentCard}>
             
             <div className={classes.MainContent}>
-                <h1>{BlogData[props.number - 1].title}</h1>
+                <h1 className={classes.Heading}>{BlogData[props.number - 1].title}</h1>
+                <p className={classes.Content}>{BlogData[props.number - 1].content}</p>
             </div>
             <div className={classes.Cross}><MdDangerous onClick={() => { backgroundCLickHandler("closed") }} size="4rem" /></div>
         </motion.div>

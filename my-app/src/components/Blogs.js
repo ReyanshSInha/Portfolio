@@ -28,7 +28,7 @@ const Blogs = () => {
             {contentState &&<Content contentDataCollector={contentCardDataCollector} number={contentKey}/>}
             <div className={classes.BlogList}>
                 {BlogData.map((BlogItem) => {
-                    return <BlogCard cardDataCollector={blogCardDataCollector} key={BlogItem.key - 1} number={BlogItem.key} delay={BlogItem.delay} duration={BlogItem.duration} title={BlogItem.title}/>
+                    return <BlogCard cardDataCollector={blogCardDataCollector} key={BlogItem.key - 1} date={BlogItem.date} number={BlogItem.key} delay={BlogItem.delay} duration={BlogItem.duration} title={BlogItem.title} image={BlogItem.image}/>
                 })}
             </div> 
         </>
