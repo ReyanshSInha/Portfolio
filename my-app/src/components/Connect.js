@@ -4,8 +4,12 @@ import { motion } from "framer-motion"
 import { GrLinkedin, GrGithub } from "react-icons/gr";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { db } from "../config/firebase"
+import { addDoc, collection } from "firebase/firestore"; 
 
 
+const connectionRequestCollectionRef = collection(db, "ConnectionRequests")
+ 
 const Connect = () => {
 
     const [animationState, setAnimatinState] = useState(true)
@@ -343,7 +347,7 @@ const Connect = () => {
         setWhy(event.target.value)
     }
 
-    const btnClickHandler = (event) => {
+    const btnClickHandler = async (event) => {
         event.preventDefault()
         if(userName == ''){
             toast.error("Enter a valid User Name!!!", {
@@ -366,15 +370,18 @@ const Connect = () => {
                 hideProgressBar: "true"
             })
         }else{
-            const userObject = {name: userName, email: email, known: known, why: why}
-            setUserData({...userObject})
-            toast.success('Connection Request Sent!!', {
-                position: "bottom-center",
-                // marginTop: "200px"
-                hideProgressBar: "true",
-                autoClose: 1000,
-            });
-            console.log(userData)
+           try{
+                await addDoc(connectionRequestCollectionRef, {UserName: userName, Email: email, Known: known, Why: why})
+                toast.success('Connection Request Sent!!', {
+                    position: "bottom-center",
+                    // marginTop: "200px"
+                    hideProgressBar: "true",
+                    autoClose: 1000,
+                });
+           }catch(err){
+                console.log(err)
+           }
+
         }
         
         

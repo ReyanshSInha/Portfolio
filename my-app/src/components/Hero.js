@@ -102,9 +102,9 @@ const iconTwoVariants = {
 
 
 const Data = [
-    { Image: image1, color: "#191970", title: "Who Am I?", text: "adf adf a dfa d fafa s" },
-    { Image: image1, color: "#191970", title: "Why this website", text: "adf aadfadfadfafdf a dfa d fafa s" },
-    { Image: image1, color: "#191970", title: "My Interests", text: "vnxcvm,nzc, adf adf a dfa d fafa s" }
+    { Image: image1, color: "#191970", title: "Who Am I?", text: "I am a full stack MERN developer" },
+    { Image: image1, color: "#191970", title: "Why this website", text: "This is a place for me to improve my skills in tech and content" },
+    { Image: image1, color: "#191970", title: "My Interests", text: "I like to code & connect with other people" }
 ]
 
 
