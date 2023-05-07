@@ -156,8 +156,8 @@ const Hero = () => {
                 </motion.p>
             </AnimatePresence>
             <div className={classes.IconSection}>
-                <motion.span variants={iconOneVariants} initial="initial" animate="animate" className={classes.IconOne}><a href="#"><GrLinkedin size="3rem" color="skyblue" /></a></motion.span>
-                <motion.span variants={iconTwoVariants} initial="initial" animate="animate" className={classes.IconTwo}><a href="#"><GrGithub size="3rem" color="lavender" /></a></motion.span>
+                <motion.span variants={iconOneVariants} initial="initial" animate="animate" className={classes.IconOne}><a href="https://www.linkedin.com/in/reyansh-sinha/" target="_blank"><GrLinkedin size="3rem" color="skyblue" /></a></motion.span>
+                <motion.span variants={iconTwoVariants} initial="initial" animate="animate" className={classes.IconTwo}><a href="https://github.com/ReyanshSInha" target="_blank"><GrGithub size="3rem" color="lavender" /></a></motion.span>
             </div>
             {/* <motion.div
                 style={{ pointerEvents: "auto" }}

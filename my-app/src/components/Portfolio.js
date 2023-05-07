@@ -99,7 +99,7 @@ const Portfolio = () => {
     
     return <div className={classes.Portfolio}>
         <motion.div variants={firstVariant} initial="initial" animate={firstAnimation ? "animate" : "exit"} onAnimationComplete={firstAnimationCompleteHandler}>sshhhh....</motion.div>
-        <motion.div variants={secondVariant} initial="initial" animate={secondAnimation ? "animate" : "exit"} onAnimationComplete={secondAnimationCompleteHandler}>It's Under Contruction</motion.div>
+        <motion.div variants={secondVariant} initial="initial" animate={secondAnimation ? "animate" : "exit"} onAnimationComplete={secondAnimationCompleteHandler}>It's Under Construction</motion.div>
         <motion.div variants={thirdVariant} initial="initial" animate="animate">It may take a while, <br/>Please visit other Sections</motion.div>
     </div>
 }

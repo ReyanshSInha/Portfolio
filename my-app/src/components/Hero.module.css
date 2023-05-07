@@ -116,7 +116,8 @@ a{
 @media (max-width: 697px) {
     .AnimationSection{
         /* border: 2px solid red; */
-        height: 305px;
+        height: 350px;
+        
     }
 
     .AnimationSection h3{
@@ -127,10 +128,12 @@ a{
     
     .AnimationSection p{
         top: 100px;
+        /* border: 2px solid pink; */
     }
 
     .IconSection{
-        top: 200px;
+        top: 250px;
+        /* border: 2px solid red; */
     }
    
 }

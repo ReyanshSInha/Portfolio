@@ -400,8 +400,8 @@ const Connect = () => {
                     <motion.div variants={connectTextThreeVariants} initial="initial" animate={animationStateThree ? "animate" : "exit"} onAnimationComplete={animationEndHandlerThree} className={classes.ConnectTextThree}>Or just wanna talk about life?</motion.div>
                     <motion.div variants={LetsConnectVariants} initial="initial" animate="animate" className={classes.LetsConnect}>Let's Connect</motion.div>
                     <div className={classes.IconSection}>
-                        <motion.span variants={iconOneVariants} initial="initial" animate="animate" className={classes.IconOne}><a href="#"><GrLinkedin size="3rem" color="skyblue" /></a></motion.span>
-                        <motion.span variants={iconTwoVariants} initial="initial" animate="animate" className={classes.IconTwo}><a href="#"><GrGithub size="3rem" color="lavender" /></a></motion.span>
+                        <motion.span variants={iconOneVariants} initial="initial" animate="animate" className={classes.IconOne}><a target="_blank" href="https://www.linkedin.com/in/reyansh-sinha/"><GrLinkedin size="3rem" color="skyblue" /></a></motion.span>
+                        <motion.span variants={iconTwoVariants} initial="initial" animate="animate" className={classes.IconTwo}><a target="_blank" href="https://github.com/ReyanshSInha"><GrGithub size="3rem" color="lavender" /></a></motion.span>
                     </div>
                     {/* <div className={classes.formCard}> */}
                     <motion.form className={classes.Laptop} variants={formVariants} initial="initial" animate="animate">
@@ -422,8 +422,8 @@ const Connect = () => {
                 <motion.div variants={mobileAnimationThreeVariants} initial="initial" animate={mobileAnimationThree? "animate": "exit"} onAnimationComplete={MobileAnimationThreeCompleteHandler} className={classes.MobileAnimation}>Or just wanna talk about life?</motion.div>
                 <motion.div variants={MobileLetsConnectVariants} initial="initial" animate="animate" className={classes.letsConnectMobile}>Let's Connect</motion.div>
                 <div className={classes.IconSectionMobile}>
-                        <motion.span variants={iconOneVariants} initial="initial" animate="animate" className={classes.IconOneMobile}><a href="#"><GrLinkedin size="3rem" color="skyblue" /></a></motion.span>
-                        <motion.span variants={iconTwoVariants} initial="initial" animate="animate" className={classes}><a href="#"><GrGithub size="3rem" color="lavender" /></a></motion.span>
+                        <motion.span variants={iconOneVariants} initial="initial" animate="animate" className={classes.IconOneMobile}><a href="https://www.linkedin.com/in/reyansh-sinha/" target="_blank"><GrLinkedin size="3rem" color="skyblue" /></a></motion.span>
+                        <motion.span variants={iconTwoVariants} initial="initial" animate="animate" className={classes}><a href="https://github.com/ReyanshSInha" target="_blank"><GrGithub size="3rem" color="lavender" /></a></motion.span>
                 </div>
                 <motion.form variants={MobileFormVariants} initial="initial" animate="animate"  className={classes.formMobile}>
                         <input value={userName} onChange={nameChangeHandler} type="text" placeholder="Enter Your Name" className={classes.InputNameMobile}></input>
